@@ -1,0 +1,21 @@
+# Optional: lets Render (render.com) create this service automatically
+# via "New +" -> "Blueprint" pointing at this repo.
+# You still need to fill in the env vars in the Render dashboard after
+# the service is created (and once, add a free persistent disk at /app/data
+# so the WHOOP connection survives restarts).
+services:
+  - type: web
+    name: whoop-mcp-server
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: WHOOP_CLIENT_ID
+        sync: false
+      - key: WHOOP_CLIENT_SECRET
+        sync: false
+      - key: WHOOP_REDIRECT_URI
+        sync: false
+      - key: PUBLIC_HOST
+        sync: false

@@ -1,0 +1,19 @@
+{
+  "name": "whoop-mcp-server",
+  "version": "1.0.0",
+  "description": "A remote MCP server that lets Claude read your WHOOP recovery, sleep, cycle, and workout data.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  }
+}
